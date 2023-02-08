@@ -33,24 +33,52 @@ def send_mail(recipient: str, sender: str, subject: str, body: str) -> bool:
 
 def get_inbox(recipient: str) -> None:
     """TODO: fill out this docstring (using the send_mail docstring as a guide)
+    Summary: Gets the mail entries for a recipient by making a GET request
+    from the /mail/inbox endpoint of the server
+    The JSON body of the request contains the following keys:
+    - recipient
+    
+    Args:
+    	recipient (str): The recipient of the mail
     """
     response = requests.get(f'{SERVER}/mail/inbox/{recipient}')
     pprint.pprint(response.json())
 
 def get_sent(sender: str) -> None:
     """TODO: fill out this docstring (using the send_mail docstring as a guide)
+    Summary: Gets the mail entries sent by a sender by making a GET request
+    from the /mail/inbox endpoint of the server
+    The JSON body of the request contains the following keys:
+    - sender
+    
+    Args:
+    	sender (str): The sender of the mail
     """
     response = requests.get(f'{SERVER}/mail/sent/{sender}')
     pprint.pprint(response.json())
 
 def get_mail(mail_id: str) -> None:
     """TODO: fill out this docstring (using the send_mail docstring as a guide)
+    Summary: Gets the mail entry with a mail id by making a GET request
+    from the /mail endpoint of the server
+    The JSON body of the request contains the following keys:
+    - mail_id
+    
+    Args:
+    	mail_id (str): The unique id of the mail
     """
     response = requests.get(f'{SERVER}/mail/{mail_id}')
     pprint.pprint(response.json())
 
 def delete_mail(mail_id: str) -> None:
     """TODO: fill out this docstring (using the send_mail docstring as a guide)
+    Summary: Deletes the mail entry with a mail id by making a DELETE 
+    request to the /mail endpoint of the server
+    The JSON body of the request contains the following keys:
+    - mail_id
+    
+    Args:
+    	mail_id (str): The unique id of the mail
     """
     response = requests.delete(f'{SERVER}/mail/{mail_id}')
     pprint.pprint(response.json())
