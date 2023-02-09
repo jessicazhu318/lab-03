@@ -21,11 +21,14 @@ def make_joke() -> Dict:
 def main():
     # weather API
     temp = get_weather("London")
+    print("WEATHER REPORT")
     print(temp)
     
     # random joke API
     joke = make_joke()
-    print("Joke: " + joke["setup"])
+    print("\n")
+    print("RANDOM JOKE")
+    print("Question: " + joke["setup"])
     print("Answer: " + joke["punchline"])
 
 if __name__ == "__main__":
