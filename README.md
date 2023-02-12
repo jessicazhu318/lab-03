@@ -34,9 +34,18 @@
    
 ### Using a 'Real' API
  Answer to Question 4:
-   API keys are used for many RESTful APIs because...
+   API keys are used for many RESTful APIs because they allow a way for the 
+   application making the call to the API to be identified. The purpose of 
+   these keys is to make sure that the application making the call is
+   authorized to do so. Thus, with API keys, you can control the number of
+   calls being made to your API as well as see patterns of your API's usage
+   in terms of traffic.
    
-   The purpose of these keys is...
+   Source for Q4:
+   https://www.cloud.google.com/endpoints/docs/openapi/when-why-api-key#:~:
+   text=API%20keys%20provide%20project%20authorization,-To%20decide%20which
+   &text=By%20identifying%20the%20calling%20project,or%20enabled%20in%20
+   the%20API
    
    
  
