@@ -24,7 +24,7 @@ def load_mail() -> List[Dict[str, str]]:
 
 def save_mail(mail: List[Dict[str, str]]) -> None:
     """TODO: fill out this docstring (using the load_mail docstring as a guide)
-    Summary: Saves all the mail entries 
+    Summary: Saves all the mail entries in a JSON file
     
     Args:
     	mail: A list of dictionaries representing mail entries
@@ -185,7 +185,7 @@ def get_inbox_route(recipient: str):
 @app.route('/mail/sent/<sender>', methods=['GET'])
 def get_sent_route(sender: str):
     """
-    Summary: Gets all mail entries for a sender from the json file
+    Summary: Gets all mail entries for a sender from the JSON file
 
     Args:
         sender (str): The sender of the mail

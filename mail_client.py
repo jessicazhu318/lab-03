@@ -34,9 +34,7 @@ def send_mail(recipient: str, sender: str, subject: str, body: str) -> bool:
 def get_inbox(recipient: str) -> None:
     """TODO: fill out this docstring (using the send_mail docstring as a guide)
     Summary: Gets the mail entries for a recipient by making a GET request
-    from the /mail/inbox endpoint of the server
-    The JSON body of the request contains the following keys:
-    - recipient
+    from the /mail/inbox endpoint of the server using the recipient key
     
     Args:
     	recipient (str): The recipient of the mail
@@ -47,9 +45,7 @@ def get_inbox(recipient: str) -> None:
 def get_sent(sender: str) -> None:
     """TODO: fill out this docstring (using the send_mail docstring as a guide)
     Summary: Gets the mail entries sent by a sender by making a GET request
-    from the /mail/inbox endpoint of the server
-    The JSON body of the request contains the following keys:
-    - sender
+    from the /mail/inbox endpoint of the server using the sender key
     
     Args:
     	sender (str): The sender of the mail
@@ -60,9 +56,7 @@ def get_sent(sender: str) -> None:
 def get_mail(mail_id: str) -> None:
     """TODO: fill out this docstring (using the send_mail docstring as a guide)
     Summary: Gets the mail entry with a mail id by making a GET request
-    from the /mail endpoint of the server
-    The JSON body of the request contains the following keys:
-    - mail_id
+    from the /mail endpoint of the server using the mail_id key
     
     Args:
     	mail_id (str): The unique id of the mail
@@ -73,10 +67,8 @@ def get_mail(mail_id: str) -> None:
 def delete_mail(mail_id: str) -> None:
     """TODO: fill out this docstring (using the send_mail docstring as a guide)
     Summary: Deletes the mail entry with a mail id by making a DELETE 
-    request to the /mail endpoint of the server
-    The JSON body of the request contains the following keys:
-    - mail_id
-    
+    request to the /mail endpoint of the server using the mail_id key
+  
     Args:
     	mail_id (str): The unique id of the mail
     """
